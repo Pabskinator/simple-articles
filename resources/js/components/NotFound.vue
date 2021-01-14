@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div class="col-md-12 d-flex flex-column justify-content-center" style="height: 95vh">
+        <div class="col-md-12 d-flex flex-column justify-content-center" style="height: 90vh">
             <div class="text-center">
                 <h1>Oops!</h1>
                 <h3>404 not found!</h3>
