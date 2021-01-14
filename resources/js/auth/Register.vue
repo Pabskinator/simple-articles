@@ -1,5 +1,7 @@
 <template>
-    <div class="container mt-2">
+    <div class="container mt-3">
+        <h3>Register</h3>
+
         <form @submit.prevent="handleRegister">
             <div class="form-group">
                 <label for="name">Name</label>
@@ -67,7 +69,7 @@
             <div class="form-group">
                 <label for="password_confirmation">Password Confirmation</label>
                 <input
-                    v-model="form.password"
+                    v-model="form.password_confirmation"
                     id="password_confirmation"
                     name="password_confirmation"
                     type="password"
@@ -87,6 +89,12 @@
 
             <div class="mt-2">
                 <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+
+            <div class="mt-2">
+                <router-link tag="a" to="/login" exact>
+                    Already registered?
+                </router-link>
             </div>
         </form>
     </div>
@@ -110,7 +118,12 @@ export default {
 
     methods: {
         handleRegister(){
-
+            this.form.post('/register').then(() => {
+                this.$router.push({name: 'Login'})
+            })
+            .catch(error => {
+                console.log(error);
+            })
         }
     },
 }

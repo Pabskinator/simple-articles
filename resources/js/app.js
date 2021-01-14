@@ -1,3 +1,4 @@
+import App from './views/App'
 import routes from './routes'
 import VueRouter from 'vue-router'
 import Form from './utilities/Form';
@@ -11,5 +12,7 @@ Vue.use(VueRouter)
 
 const app = new Vue({
     el: '#app',
+    template: `<app></app>`,
+    components: {App},
     router: new VueRouter(routes)
 });

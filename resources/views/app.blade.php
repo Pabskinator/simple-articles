@@ -10,11 +10,7 @@
 </head>
 <body class="antialiased">
     <div id="app">
-        @include('layouts.nav')
 
-        <div class="container-fluid">
-            <router-view></router-view>
-        </div>
     </div>
 
     <script src="{{ mix('js/app.js') }}"></script>

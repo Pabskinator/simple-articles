@@ -14,15 +14,18 @@ export default {
         },
         {
             path: '/',
-            component: Home
+            component: Home,
+            name: 'Home'
         },
         {
             path: '/login',
-            component: Login
+            component: Login,
+            name: 'Login'
         },
         {
             path: '/register',
-            component: Register
+            component: Register,
+            name: 'Register'
         },
     ]
 }

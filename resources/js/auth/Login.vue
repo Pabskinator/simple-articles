@@ -1,5 +1,7 @@
 <template>
-    <div class="container mt-2">
+    <div class="container mt-3">
+        <h3>Sign in</h3>
+
         <form @submit.prevent="handleLogin">
             <div class="form-group">
                 <label for="email">Email</label>
@@ -46,6 +48,12 @@
             <div class="mt-2">
                 <button type="submit" class="btn btn-primary">Login</button>
             </div>
+
+            <div class="mt-2">
+                <router-link tag="a" to="/register" exact>
+                    Don't have an account?
+                </router-link>
+            </div>
         </form>
     </div>
 </template>
@@ -66,8 +74,16 @@ export default {
 
     methods: {
         handleLogin(){
-
-        }
+            axios.get('/sanctum/csrf-cookie').then(() => {
+                this.form.post('/login').then(() => {
+                    this.$emit('checkUser')
+                    this.$router.push({name: 'Home'})
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+            });
+        },
     },
 }
 </script>
