@@ -2,6 +2,8 @@
     <div class="container-fluid mt-3">
         <button class="btn btn-success mb-3" @click="toggleModal('show')">Add Article</button>
 
+        <Filters @filteredArticles="filteredArticles"></Filters>
+
         <div v-if="!articles.length">
             <h1>No Articles Found!</h1>
         </div>
@@ -27,11 +29,12 @@
 
 <script>
 import ArticleFormModal from "../components/ArticleFormModal";
+import Filters from "../components/Filters";
 
 export default {
     props: [],
 
-    components: {ArticleFormModal},
+    components: {ArticleFormModal, Filters},
 
     data() {
         return {
@@ -53,6 +56,13 @@ export default {
         toggleModal(mod){
             let element = this.$refs.article_modal.$el
             mod === 'show' ? $(element).modal('show') : $(element).modal('hide')
+        },
+
+        filteredArticles(filter){
+            filter.mod = 'user';
+            axios.post('api/filtered_articles', filter).then(response => {
+                this.articles = response.data.articles
+            })
         },
 
         refreshData(){

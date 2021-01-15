@@ -19,6 +19,7 @@ Route::get('check_user', function (){
 
 Route::get('/articles', 'ArticleController@index')->name('articles.index');
 Route::get('/articles/{article}', 'ArticleController@show')->name('articles.show');
+Route::post('/filtered_articles', 'FilteredArticlesController@index');
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/articles', 'ArticleController@store');
