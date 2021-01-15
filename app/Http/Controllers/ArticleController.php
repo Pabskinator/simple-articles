@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\ArticleResource;
 use App\Models\Article;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -40,7 +41,10 @@ class ArticleController extends Controller
 
     public function destroy(Article $article)
     {
-        $article->delete();
+        try {
+            $article->delete();
+        } catch (Exception $e) {
+        }
     }
 
     public function validateArticle(): array
