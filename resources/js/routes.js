@@ -1,6 +1,8 @@
 import Home from './views/Home';
 import Login from './auth/Login';
 import Register from './auth/Register';
+import Article from './views/SingleArticle';
+import MyArticles from "./views/MyArticles";
 import NotFound from './components/NotFound';
 
 export default {
@@ -26,6 +28,16 @@ export default {
             path: '/register',
             component: Register,
             name: 'Register'
+        },
+        {
+            path: '/articles/:id',
+            component: Article,
+            name: 'Article'
+        },
+        {
+            path: '/my_articles',
+            component: MyArticles,
+            name: 'MyArticles'
         },
     ]
 }

@@ -28,7 +28,7 @@
                     </li>
 
                     <li class="nav-item" v-if="user">
-                        <router-link class="nav-link" tag="a" to="/contact">
+                        <router-link class="nav-link" tag="a" to="/my_articles">
                             My Articles
                         </router-link>
                     </li>

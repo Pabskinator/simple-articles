@@ -25,6 +25,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/articles/{article}/edit', 'ArticleController@edit');
     Route::put('/articles/{article}', 'ArticleController@update');
     Route::delete('/articles/{article}', 'ArticleController@destroy');
+
+    Route::get('/my_articles', 'UserArticlesController@index')->name('my_articles.index');
 });
 
 

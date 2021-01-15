@@ -11,14 +11,14 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        $articles = Article::latest()->get();
+        $articles = Article::latest()->with('author:id,name')->get();
 
         return compact('articles');
     }
 
     public function show(Article $article)
     {
-        return compact('article');
+        return (new ArticleResource($article->loadMissing(['author'])))->response();
     }
 
     public function store(Request $request)

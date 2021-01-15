@@ -1,5 +1,7 @@
 <template>
     <div class="container-fluid mt-3">
+        <button class="btn btn-success" @click="toggleModal('show')">Add Article</button>
+
         <div class="card my-2" v-for="article in articles" :key="article.id">
             <div class="card-body">
                 <h5 class="card-title">
@@ -8,20 +10,28 @@
                     </router-link>
                 </h5>
                 <div class="card-subtitle mb-2 text-muted">
-                    <h6>Author: {{ article.author.name }}</h6>
+                    <h6>{{ article.excerpt }}</h6>
                 </div>
             </div>
         </div>
+
+        <article-form-modal ref="article_modal" :article="null" @getData="refreshData">
+
+        </article-form-modal>
     </div>
 </template>
 
 <script>
+import ArticleFormModal from "../components/ArticleFormModal";
+
 export default {
     props: [],
 
+    components: {ArticleFormModal},
+
     data() {
         return {
-            articles: []
+            articles: [],
         }
     },
 
@@ -31,10 +41,20 @@ export default {
 
     methods: {
         getArticles(){
-            axios.get('/api/articles').then(response => {
+            axios.get('/api/my_articles').then(response => {
                 this.articles = response.data.articles;
             })
-        }
+        },
+
+        toggleModal(mod){
+            let element = this.$refs.article_modal.$el
+            mod === 'show' ? $(element).modal('show') : $(element).modal('hide')
+        },
+
+        refreshData(){
+            this.getArticles();
+            this.toggleModal('hide');
+        },
     },
 }
 </script>

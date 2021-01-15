@@ -22,6 +22,7 @@ class ArticleResource extends JsonResource
             'user_id' => $this->user_id,
             'title' => $this->title,
             'excerpt' => $this->excerpt,
+            'author' => $this->author,
             'can' => $this->permissions(),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
