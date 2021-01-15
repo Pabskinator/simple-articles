@@ -1,6 +1,9 @@
 <template>
     <div class="container-fluid mt-3">
-        <div class="card my-2" v-for="article in articles" :key="article.id">
+        <div v-if="!articles.length">
+            <h1>No Articles Found!</h1>
+        </div>
+        <div v-else class="card my-2" v-for="article in articles" :key="article.id">
             <div class="card-body">
                 <h5 class="card-title">
                     <router-link tag="a" :to="{path: '/articles/' + article.id}">
