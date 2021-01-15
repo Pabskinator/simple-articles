@@ -36,9 +36,11 @@ class ArticlesTest extends TestCase
 
         $response = $this->get('/api/articles/' . $article->id);
 
-        $this->assertEquals($article->body, $response['article']['body']);
-        $this->assertEquals($article->title, $response['article']['title']);
-        $this->assertEquals($article->excerpt, $response['article']['excerpt']);
+        $response_array = $response->getData(true)['data'];
+
+        $this->assertEquals($article->body, $response_array['body']);
+        $this->assertEquals($article->title, $response_array['title']);
+        $this->assertEquals($article->excerpt, $response_array['excerpt']);
 
         $response->assertSeeText($article->title);
     }
