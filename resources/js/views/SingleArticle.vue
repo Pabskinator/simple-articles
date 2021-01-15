@@ -1,6 +1,9 @@
 <template>
     <div class="container-fluid mt-3">
-        <button class="btn btn-light" @click="goBack">Back</button>
+        <button class="btn btn-light" @click="goBack">
+            <i class="fa fa-arrow-alt-circle-left"></i>
+            Back
+        </button>
 
         <div class="card my-2">
             <div class="card-body">
@@ -29,6 +32,7 @@
 
                         @click="getEditableDetails()">
 
+                        <i class="fa fa-pen-alt"></i>
                         Edit
                     </button>
 
@@ -38,6 +42,7 @@
 
                         @click="deleteArticle">
 
+                        <i class="fa fa-trash"></i>
                         Delete
                     </button>
                 </div>

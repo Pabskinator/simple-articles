@@ -15,11 +15,16 @@
   <component name="ChangeListManager">
     <list default="true" id="8af88212-ed5e-4372-8059-396c09593478" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ArticleFormModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ArticleFormModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Filters.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Filters.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Navbar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/MyArticles.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/MyArticles.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/SingleArticle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/SingleArticle.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +189,7 @@
       <updated>1610633254011</updated>
       <workItem from="1610633255168" duration="1979000" />
       <workItem from="1610635248865" duration="4719000" />
-      <workItem from="1610640315510" duration="39642000" />
+      <workItem from="1610640315510" duration="40739000" />
     </task>
     <servers />
   </component>
@@ -232,9 +237,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="602" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1610674609800" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1610680759761">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1610682119105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1610680759761" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1610682119105" />
   </component>
 </project>

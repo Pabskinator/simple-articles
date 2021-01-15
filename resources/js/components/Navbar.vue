@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <router-link class="navbar-brand" tag="a" to="/" exact>
-            Articles
+           <i class="fa fa-book"></i> Articles
         </router-link>
 
         <button

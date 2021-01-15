@@ -1,6 +1,13 @@
 <template>
     <div class="container-fluid mt-3">
-        <button class="btn btn-success mb-3" @click="toggleModal('show')">Add Article</button>
+        <button
+            class="btn btn-success mb-3"
+
+            @click="toggleModal('show')">
+
+            <i class="fa fa-plus"></i>
+            Add Article
+        </button>
 
         <Filters @filteredArticles="filteredArticles"></Filters>
 

@@ -87,9 +87,32 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button v-if="modalTitle === 'Add'" type="submit" class="btn btn-success">Add</button>
-                        <button v-else type="submit" class="btn btn-primary">Update</button>
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-dismiss="modal">
+
+                            <i class="fa fa-times-circle"></i>
+                            Close
+                        </button>
+
+                        <button
+                            v-if="modalTitle === 'Add'"
+                            type="submit"
+                            class="btn btn-success">
+
+                            <i class="fa fa-plus"></i>
+                            Add
+                        </button>
+
+                        <button
+                            v-else
+                            type="submit"
+                            class="btn btn-primary">
+
+                            <i class="fa fa-save"></i>
+                            Update
+                        </button>
                     </div>
                 </form>
             </div>
