@@ -35,12 +35,10 @@
 </template>
 
 <script>
-import ArticleFormModal from "../components/ArticleFormModal";
 import Filters from "../components/Filters";
+import ArticleFormModal from "../components/ArticleFormModal";
 
 export default {
-    props: [],
-
     components: {ArticleFormModal, Filters},
 
     data() {

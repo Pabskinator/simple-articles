@@ -121,7 +121,11 @@
 </template>
 
 <script>
+import { alertMixin } from "../mixins/alertMixins";
+
 export default {
+    mixins: [alertMixin],
+
     props: {
         article: {
             default: null
@@ -165,18 +169,22 @@ export default {
 
         addArticle(){
             this.form.post('/api/articles').then(() => {
+                this.showToast('', 'Article successfully added!', 'success')
                 this.$emit('getData')
             })
             .catch(error => {
                 console.log(error);
+                this.showToast('', 'Failed to add article!', 'error')
             })
         },
 
         updateArticle(data){
             this.form.put('/api/articles/' + data.id).then(() => {
+                this.showToast('', 'Article successfully updated!', 'success')
                 this.$emit('getData', this.article.id)
             })
             .catch(error => {
+                this.showToast('', 'Failed to update article!', 'error')
                 console.log(error);
             })
         },

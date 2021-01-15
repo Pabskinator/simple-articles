@@ -56,10 +56,11 @@
 </template>
 
 <script>
+import { alertMixin } from "../mixins/alertMixins";
 import ArticleFormModal from "../components/ArticleFormModal";
 
 export default {
-    props: [],
+    mixins: [alertMixin],
 
     components: {ArticleFormModal},
 
@@ -90,6 +91,7 @@ export default {
 
         deleteArticle(){
             axios.delete('/api/articles/' + this.$route.params.id).then(() => {
+                this.showToast('', 'You have successfully deleted an article!', 'error')
                 this.$router.push({name: 'MyArticles'})
             })
         },
